@@ -14,9 +14,71 @@ Bleach aims to serve as a pentesting device so setting it up requires a lot of k
 - Flood WiFi devices with Fake Access Points
 - Scan for BSSID/ESSID of nearby WiFi and Bluetooth networks
 - Play Starships
-- Open Source Code:)
+- Open-Source code:)
 
 # Setup
 
 Before we get started, here's what is necessary:
-- ESP32 Devkit v1 WROOM WiFi+BT
+- ESP32 Devkit v1 WiFi+BT (https://botland.store/esp32-wifi-and-bt-modules/8893-esp32-wifi-bt-42-platform-with-module-5904422337438.html)
+- LCD display 2x16 + I2C LCM1602 converter (https://botland.store/alphanumeric-and-graphic-displays/2351-lcd-display-2x16-characters-blue-i2c-lcm1602-5904422309244.html)
+- Rotation Sensor Waveshare 9533 (https://botland.store/encoders/4483-rotation-sensor-encoder-with-button-module-waveshare-9533-5904422366582.html)
+- 9 female-to-female jumper wires (2 black or GND, 2 red or VNC, 5 data (any color, e.g. purple))
+- USB to MicroUSB data cable
+- Any power source
+- Small box or a breadboard that can fit the components 
+
+## Easy - This setup allows for BLE/Captive Portal attacks (wifi.send_raw_packet not accessible)
+```
+  $ git clone https://github.com/FLOCK4H/Bleach.git
+```
+1. Flash the MicroPython firmware onto the ESP32
+2. Upload project files to the ESP
+3. Disconnect ESP from the device in order to safely connect modules
+4. Connect LCD to ESP32:
+  - SCL: GPIO22
+  - SDA: GPIO21
+  - VCC: 5V
+5. Connect rotary sensor:
+  - SIA: GPIO4
+  - SIB: GPIO5
+  - SW: GPIO2
+  - VCC: 3.3V
+  * Do not forget to connect GND cables to both components:)
+6. Plug the ESP to the power source
+6.5 Take a screwdriver or any thin object and tweak the potentiometer on the back of the LCD screen until the text will be clear to read
+7. By this time you should be fine to go, just without some WiFi features
+
+## Advanced
+1. Follow this process to the point where you have MicroPython repo: https://github.com/micropython/micropython/blob/master/ports/esp32/README.md
+2. Inside the folder micropython/ports/esp32/ modify the file network_wlan.c
+
+For the sake of educational purposes I'm only going to tell what declaration you will need:
+```
+esp_err_t esp_wifi_80211_tx(wifi_interface_t ifx, const void *buffer, int len, bool en_sys_seq);
+```
+3. Bind to MicroPython under name of `send_raw_packet`
+4. Go back to the guide, build and flash the firmware onto the ESP
+5. Upload project files to the ESP
+6. Disconnect ESP from the device in order to safely connect modules
+7. Connect LCD to ESP32:
+  - SCL: GPIO22
+  - SDA: GPIO21
+  - VCC: 5V
+8. Connect rotary sensor:
+  - SIA: GPIO4
+  - SIB: GPIO5
+  - SW: GPIO2
+  - VCC: 3.3V
+  * Do not forget to connect GND cables to both components:)
+9. Plug the ESP to the power source
+10.5 Take a screwdriver or any thin object and tweak the potentiometer on the back of the LCD screen until the text will be clear to read
+11. You are fully geared up
+
+# Final Product
+
+
+# DISCLAIMER & LEGAL NOTICE
+
+---
+
+The author is not responsible for any illegal, unauthorized or unethical use of the device, software or firmware provided. Always ensure you have the legal rights and authorization for using such tools. Misuse of Bleach may result in legal consequences, users are expected to comply with all applicable regulations and standards.
