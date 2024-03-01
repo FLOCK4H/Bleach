@@ -49,7 +49,7 @@ Before we get started, here's what is necessary:
 7. By this time you should be fine to go, just without some WiFi features
 
 ## Advanced
-1. Follow this process to the point where you have MicroPython repo: https://github.com/micropython/micropython/blob/master/ports/esp32/README.md
+1. Follow this process to the point where you have esp-idf and MicroPython repos: https://github.com/micropython/micropython/blob/master/ports/esp32/README.md
 2. Inside the folder micropython/ports/esp32/ modify the file network_wlan.c
 
 For the sake of educational purposes I'm only going to tell what declaration you will need:
@@ -69,16 +69,19 @@ esp_err_t esp_wifi_80211_tx(wifi_interface_t ifx, const void *buffer, int len, b
   - SIB: GPIO5
   - SW: GPIO2
   - VCC: 3.3V
-  * Do not forget to connect GND cables to both components:)
+  - Do not forget to connect GND cables to both components:)
 9. Plug the ESP to the power source
 10.5 Take a screwdriver or any thin object and tweak the potentiometer on the back of the LCD screen until the text will be clear to read
 11. You are fully geared up
 
 # Final Product
-
+- Simple example made out of a carton box and a black tape
+  
+![IMG_2124](https://github.com/FLOCK4H/Bleach/assets/161654571/88caaca3-686a-4812-a5bf-5978b77bae0d)
 
 # DISCLAIMER & LEGAL NOTICE
 
+The author is not responsible for any illegal, unauthorized or unethical use of the device, software or firmware provided. Always ensure you have the legal rights and authorization for using such tools. Misuse of Bleach may result in legal consequences, users are expected to comply with all applicable regulations and standards.
+
 ---
 
-The author is not responsible for any illegal, unauthorized or unethical use of the device, software or firmware provided. Always ensure you have the legal rights and authorization for using such tools. Misuse of Bleach may result in legal consequences, users are expected to comply with all applicable regulations and standards.
