@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            background: black;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="c"></canvas>
+    <script>
+        var c = document.getElementById("c");
+        var ctx = c.getContext("2d");
+        c.height = window.innerHeight;
+        c.width = window.innerWidth;
+
+        var matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}.:;<=>?@[\\]^_`{|}~";
+        matrix = matrix.split("");
+
+        var font_size = 10;
+        var columns = c.width / font_size;
+        var drops = new Array(Math.floor(columns)).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, c.width, c.height);
+            ctx.fillStyle = "#0F0";
+            ctx.font = font_size + "px arial";
+            for (var i = 0; i < drops.length; i++) {
+                var text = matrix[Math.floor(Math.random() * matrix.length)];
+                ctx.fillText(text, i * font_size, drops[i] * font_size);
+                if (drops[i] * font_size > c.height && Math.random() > 0.95) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+
+        function drawAdditionalGraphics() {
+            for (let i = 0; i < 50; i++) {
+                ctx.beginPath();
+                var gradient = ctx.createRadialGradient(c.width * Math.random(), c.height * Math.random(), 10, c.width * Math.random(), c.height * Math.random(), 300);
+                gradient.addColorStop(0, `rgba(${Math.floor(255 * Math.random())}, ${Math.floor(255 * Math.random())}, ${Math.floor(255 * Math.random())}, 0.8)`);
+                gradient.addColorStop(1, `rgba(${Math.floor(255 * Math.random())}, ${Math.floor(255 * Math.random())}, ${Math.floor(255 * Math.random())}, 0)`);
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, c.width, c.height);
+            }
+        }
+
+        function animate() {
+            drawMatrix();
+            drawAdditionalGraphics();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
+
