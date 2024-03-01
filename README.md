@@ -25,7 +25,7 @@ Before we get started, here's what is necessary:
 - LCD display 2x16 + I2C LCM1602 converter (https://botland.store/alphanumeric-and-graphic-displays/2351-lcd-display-2x16-characters-blue-i2c-lcm1602-5904422309244.html)
 - Rotation Sensor Waveshare 9533 (https://botland.store/encoders/4483-rotation-sensor-encoder-with-button-module-waveshare-9533-5904422366582.html)
 - 9 female-to-female jumper wires (2 black or GND, 2 red or VNC, 5 data (any color, e.g. purple))
-- USB to MicroUSB data cable
+- USB to Micro USB data cable
 - Any power source
 - Small box or a breadboard that can fit the components 
 
@@ -80,6 +80,9 @@ esp_err_t esp_wifi_80211_tx(wifi_interface_t ifx, const void *buffer, int len, b
 - Simple example made out of a carton box and a black tape
   
 ![IMG_2124](https://github.com/FLOCK4H/Bleach/assets/161654571/88caaca3-686a-4812-a5bf-5978b77bae0d)
+![IMG_2127](https://github.com/FLOCK4H/Bleach/assets/161654571/6835bca4-46f2-4507-a989-9e3f6aa7f939)
+![IMG_2128](https://github.com/FLOCK4H/Bleach/assets/161654571/593af1a3-dc4b-4f98-ba76-c1300977a2ea)
+
 
 # DISCLAIMER & LEGAL NOTICE
 
