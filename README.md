@@ -2,7 +2,9 @@
 
 Software for ESP32 with LCD 2x16 screen written in MicroPython
 
-Bleach aims to serve as a pentesting device so setting it up requires a lot of knowledge, therefore `this project is not for beginners`
+Bleach is designed as a pentesting device, and its setup requires substantial knowledge; 
+
+`therefore, this project is not suitable for beginners`
 
 ## Real advantages
 - Create captive portals (choose from 4 templates)
@@ -45,14 +47,14 @@ Before we get started, here's what is necessary:
   - VCC: 3.3V
   * Do not forget to connect GND cables to both components:)
 6. Plug the ESP to the power source
-6.5 Take a screwdriver or any thin object and tweak the potentiometer on the back of the LCD screen until the text will be clear to read
-7. By this time you should be fine to go, just without some WiFi features
+7. Take a screwdriver or any thin object and tweak the potentiometer on the back of the LCD screen until the text will be clear to read
+8. By this time you should be fine to go, just without some WiFi features
 
 ## Advanced
 1. Follow this process to the point where you have esp-idf and MicroPython repos: https://github.com/micropython/micropython/blob/master/ports/esp32/README.md
 2. Inside the folder micropython/ports/esp32/ modify the file network_wlan.c
 
-For the sake of educational purposes I'm only going to tell what declaration you will need:
+For the sake of educational purposes I'm only going to tell what declaration you will need to include:
 ```
 esp_err_t esp_wifi_80211_tx(wifi_interface_t ifx, const void *buffer, int len, bool en_sys_seq);
 ```
@@ -71,7 +73,7 @@ esp_err_t esp_wifi_80211_tx(wifi_interface_t ifx, const void *buffer, int len, b
   - VCC: 3.3V
   - Do not forget to connect GND cables to both components:)
 9. Plug the ESP to the power source
-10.5 Take a screwdriver or any thin object and tweak the potentiometer on the back of the LCD screen until the text will be clear to read
+10. Take a screwdriver or any thin object and tweak the potentiometer on the back of the LCD screen until the text will be clear to read
 11. You are fully geared up
 
 # Final Product
@@ -81,7 +83,7 @@ esp_err_t esp_wifi_80211_tx(wifi_interface_t ifx, const void *buffer, int len, b
 
 # DISCLAIMER & LEGAL NOTICE
 
-The author is not responsible for any illegal, unauthorized or unethical use of the device, software or firmware provided. Always ensure you have the legal rights and authorization for using such tools. Misuse of Bleach may result in legal consequences, users are expected to comply with all applicable regulations and standards.
+The author is not responsible for any illegal, unauthorized or unethical use of the device, software or firmware provided. Always ensure you have the legal rights and authorization for using such tools. Misuse of Bleach may result in legal consequences; users are expected to comply with all applicable regulations and standards.
 
 ---
 
