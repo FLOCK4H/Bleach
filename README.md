@@ -45,7 +45,8 @@ Before we get started, here's what is necessary:
   - SIB: GPIO5
   - SW: GPIO2
   - VCC: 3.3V
-  * Do not forget to connect GND cables to both components:)
+    
+  * Do not forget to connect GND cables
 6. Plug the ESP to the power source
 7. Take a screwdriver or any thin object and tweak the potentiometer on the back of the LCD screen until the text will be clear to read
 8. By this time you should be fine to go, just without some WiFi features
