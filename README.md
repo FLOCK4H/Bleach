@@ -24,7 +24,7 @@ Before we get started, here's what is necessary:
 - ESP32 Devkit v1 WiFi+BT (https://botland.store/esp32-wifi-and-bt-modules/8893-esp32-wifi-bt-42-platform-with-module-5904422337438.html)
 - LCD display 2x16 + I2C LCM1602 converter (https://botland.store/alphanumeric-and-graphic-displays/2351-lcd-display-2x16-characters-blue-i2c-lcm1602-5904422309244.html)
 - Rotation Sensor Waveshare 9533 (https://botland.store/encoders/4483-rotation-sensor-encoder-with-button-module-waveshare-9533-5904422366582.html)
-- 9 female-to-female jumper wires (2 black or GND, 2 red or VNC, 5 data (any color, e.g. purple))
+- 9 female-to-female jumper wires (2 black or GND, 2 red or VCC, 5 data (any color, e.g. purple just not red/black))
 - USB to Micro USB data cable
 - Any power source
 - Small box or a breadboard that can fit the components 
