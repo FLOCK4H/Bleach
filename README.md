@@ -1,6 +1,6 @@
 # Bleach v1.5
 
-Software for ESP32 with LCD 2x16 screen written in MicroPython
+Software for ESP32 with LCD 2x16 screen and waveshare rotary button (sensor) written in MicroPython
 
 Bleach is designed as a pentesting device, and its setup requires substantial knowledge; 
 
