@@ -1,3 +1,8 @@
+<div align="center">
+  <img src="https://github.com/FLOCK4H/Bleach/assets/161654571/78b8410d-d8cf-403d-8f52-56474b9ebef0" alt="Bleach logo" width="128" />
+</div>
+
+
 # Bleach v1.5
 
 Software for ESP32 with LCD 2x16 screen and waveshare rotary button (sensor) written in MicroPython
